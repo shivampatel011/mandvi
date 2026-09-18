@@ -1,0 +1,116 @@
+.nightsSection {
+  background-color: var(--color-black);
+}
+
+.container {
+  display: flex;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  min-width: 250px;
+}
+
+.timelineBtn {
+  text-align: left;
+  padding: 1.5rem;
+  font-size: var(--text-md);
+  color: var(--color-cream);
+  opacity: 0.4;
+  border-left: 1px solid rgba(244, 235, 217, 0.1);
+  transition: all 0.4s var(--ease-out-expo);
+  letter-spacing: 2px;
+}
+
+.timelineBtn:hover {
+  opacity: 0.8;
+  padding-left: 2rem;
+  border-left-color: rgba(244, 235, 217, 0.3);
+}
+
+.timelineBtn.active {
+  opacity: 1;
+  color: var(--color-gold);
+  border-left-color: var(--color-gold);
+  padding-left: 2rem;
+  font-weight: 500;
+}
+
+.detailsWrapper {
+  flex: 1;
+  background-color: var(--color-charcoal);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.details {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.theme {
+  font-size: var(--text-3xl);
+  font-family: var(--font-serif);
+  color: var(--color-cream);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 2px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: var(--text-xs);
+  color: var(--color-gold);
+  letter-spacing: 2px;
+}
+
+.value {
+  font-size: var(--text-md);
+  color: var(--color-cream);
+}
+
+.status {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid rgba(244, 235, 217, 0.1);
+}
+
+.available {
+  color: var(--color-gold);
+  letter-spacing: 3px;
+  font-size: var(--text-xs);
+}
+
+.soldout {
+  color: var(--color-terracotta);
+  letter-spacing: 3px;
+  font-size: var(--text-xs);
+}
+
+@media (max-width: 1024px) {
+  .container { flex-direction: column; gap: var(--spacing-md); }
+  .timeline { flex-direction: row; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: none; }
+  .timeline::-webkit-scrollbar { display: none; }
+  .timelineBtn { border-left: none; border-bottom: 1px solid rgba(244, 235, 217, 0.1); white-space: nowrap; padding: 1rem; }
+  .timelineBtn.active { border-left: none; border-bottom-color: var(--color-gold); padding-left: 1rem; padding-bottom: 1.5rem; }
+  .timelineBtn:hover { padding-left: 1rem; }
+  .infoGrid { grid-template-columns: 1fr; }
+}

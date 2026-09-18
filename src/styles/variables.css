@@ -1,0 +1,45 @@
+:root {
+  
+  --color-maroon: #5E1914;
+  --color-charcoal: #1C1C1E;
+  --color-black: #0A0A0C;
+  --color-gold: #C5A059;
+  --color-cream: #F4EBD9;
+  --color-terracotta: #D36A4E;
+  --color-brown: #8C5B42;
+  
+  
+  --bg-main: var(--color-charcoal);
+  --bg-secondary: var(--color-black);
+  --bg-warm: var(--color-maroon);
+  --text-main: var(--color-cream);
+  --text-accent: var(--color-gold);
+
+  
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-gujarati: 'Hind Vadodara', sans-serif;
+
+  
+  --text-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.85rem);
+  --text-sm: clamp(0.8rem, 0.75rem + 0.25vw, 1rem);
+  --text-md: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+  --text-lg: clamp(1.2rem, 1rem + 1vw, 1.5rem);
+  --text-xl: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+  --text-2xl: clamp(2rem, 1.5rem + 3vw, 4rem);
+  --text-3xl: clamp(2.5rem, 2rem + 4vw, 5rem);
+  --text-4xl: clamp(3rem, 2.5rem + 5vw, 7rem);
+
+  
+  --spacing-xs: clamp(0.5rem, 1vw, 1rem);
+  --spacing-sm: clamp(1rem, 2vw, 2rem);
+  --spacing-md: clamp(2rem, 4vw, 4rem);
+  --spacing-lg: clamp(4rem, 8vw, 8rem);
+  --spacing-xl: clamp(6rem, 12vw, 12rem);
+  --spacing-2xl: clamp(8rem, 16vw, 16rem);
+  --spacing-section: clamp(8rem, 20vw, 20rem); 
+
+  
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}

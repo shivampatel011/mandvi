@@ -1,0 +1,53 @@
+.introSection {
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle at 50% 50%, var(--color-maroon) 0%, var(--color-charcoal) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.mainTitle {
+  font-size: var(--text-4xl);
+  text-align: center;
+  color: var(--color-cream);
+  line-height: 1.2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  letter-spacing: 6px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.phrasesContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phrase {
+  position: absolute;
+  font-size: var(--text-3xl);
+  color: var(--color-gold);
+  text-align: center;
+  opacity: 0;
+  font-family: var(--font-serif);
+  letter-spacing: 2px;
+  width: 90%;
+  will-change: transform, opacity;
+}
+
+.finalPhrase {
+  color: var(--color-cream);
+  letter-spacing: 4px;
+}

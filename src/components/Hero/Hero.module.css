@@ -1,0 +1,224 @@
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-black);
+  z-index: 1;
+}
+
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(94, 25, 20, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 80%, rgba(197, 160, 89, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image:
+    radial-gradient(var(--color-gold) 1px, transparent 1px),
+    radial-gradient(var(--color-gold) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  max-width: 900px;
+}
+
+
+.decorLine {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin-bottom: 2rem;
+  opacity: 0.6;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-gold);
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  color: var(--color-cream);
+  letter-spacing: 0.12em;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow:
+    0 4px 30px rgba(94, 25, 20, 0.4),
+    0 0 80px rgba(197, 160, 89, 0.08);
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-cream);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  opacity: 0.6;
+}
+
+.tagline {
+  font-family: var(--font-gujarati);
+  font-size: var(--text-md);
+  color: var(--color-gold);
+  margin-top: 2.5rem;
+  opacity: 0.7;
+  letter-spacing: 0.05em;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all 0.5s var(--ease-out-expo);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.primaryBtn {
+  background: var(--color-gold);
+  color: var(--color-black);
+  border-color: var(--color-gold);
+}
+
+.primaryBtn:hover {
+  background: transparent;
+  color: var(--color-gold);
+  box-shadow: 0 0 30px rgba(197, 160, 89, 0.15);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: var(--color-cream);
+  border-color: rgba(244, 235, 217, 0.25);
+}
+
+.secondaryBtn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  box-shadow: 0 0 30px rgba(197, 160, 89, 0.1);
+}
+
+
+.scrollDown {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.scrollDown:hover {
+  opacity: 0.7;
+}
+
+.scrollDown span {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  color: var(--color-cream);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.scrollArrow {
+  width: 1px;
+  height: 30px;
+  background: linear-gradient(180deg, var(--color-cream), transparent);
+}
+
+
+@media (max-width: 1024px) {
+  .title {
+    letter-spacing: 0.08em;
+  }
+
+  .subtitle {
+    letter-spacing: 0.3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .content {
+    padding: 2rem 1.5rem;
+  }
+
+  .eyebrow {
+    letter-spacing: 4px;
+    font-size: 0.65rem;
+  }
+
+  .subtitle {
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    justify-content: center;
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+  }
+}

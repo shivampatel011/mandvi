@@ -1,0 +1,40 @@
+.dancer {
+  position: absolute;
+  color: var(--color-terracotta);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.decoration {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-cream);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.smallText {
+  font-family: var(--font-gujarati);
+  font-size: 1rem;
+  color: var(--color-gold);
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .dancer svg { width: 18px; height: 18px; }
+  .dot { width: 3px; height: 3px; }
+  .smallText { font-size: 0.75rem; }
+}

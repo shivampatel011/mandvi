@@ -1,0 +1,41 @@
+.magneticButton {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  border-radius: 50px;
+  padding: 14px 32px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.4s var(--ease-out-expo);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  will-change: transform;
+  border: 1px solid transparent;
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s var(--ease-out-expo);
+  transform: translateX(0);
+}
+
+.magneticButton:hover {
+  background-color: var(--color-cream);
+  color: var(--color-black);
+  border-color: var(--color-cream);
+  transform: scale(1.03); 
+}
+
+.magneticButton:hover .iconWrap {
+  transform: translateX(12px); 
+}

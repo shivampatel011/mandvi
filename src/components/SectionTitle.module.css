@@ -1,0 +1,38 @@
+.sectionTitle {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+.gujarati {
+  font-size: 1.25rem;
+  color: var(--color-gold);
+  opacity: 0.8;
+  letter-spacing: 2px;
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--color-cream);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--color-cream);
+  opacity: 0.7;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
