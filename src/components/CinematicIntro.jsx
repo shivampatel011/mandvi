@@ -123,7 +123,7 @@ const CinematicIntro = () => {
       <div className={styles.imageContainer}>
         <img
           ref={imageRef}
-          src="/images/hero2.jpg"
+          src={`${import.meta.env.BASE_URL}images/hero2.jpg`}
           alt="Mandvi — માંડવી by રાસલીલા 2026"
           className={styles.heroImage}
           draggable="false"

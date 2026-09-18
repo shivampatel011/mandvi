@@ -109,7 +109,7 @@ const TheCircle = () => {
           
           <img 
             ref={imageRef}
-            src="/images/top.webp" 
+            src={`${import.meta.env.BASE_URL}images/top.webp`} 
             alt="Garba Circle" 
             className={styles.centerImage} 
             loading="lazy"
